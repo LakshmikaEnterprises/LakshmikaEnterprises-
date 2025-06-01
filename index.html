@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Parallax Page with Hamburger Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo">MySite</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    Welcome to Our Site
+  </section>
+
+  <section class="grid" id="features">
+    <div class="card">
+      <h2>Feature One</h2>
+      <p>Detail about feature one that is very interesting and useful.</p>
+    </div>
+    <div class="card">
+      <h2>Feature Two</h2>
+      <p>Detail about feature two that is very interesting and useful.</p>
+    </div>
+    <div class="card">
+      <h2>Feature Three</h2>
+      <p>Detail about feature three that is very interesting and useful.</p>
+    </div>
+  </section>
+
+  <section style="text-align: center; margin: 60px 0;" id="contact">
+    <a href="#hero" class="btn">Get Started Now</a>
+  </section>
+
+  <script>
+    // Toggle nav menu on mobile
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      hamburger.classList.toggle('toggle');
+    });
+  </script>
+
+</body>
+</html>
